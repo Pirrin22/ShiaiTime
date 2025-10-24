@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shiai_time/screens/home_screen.dart';
+import 'core/app_colors.dart';
+import 'core/text_styles.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +12,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        appBar: AppBar(
+          backgroundColor: AppColors.primary,
+          foregroundColor: Colors.white,
+          title: Text('Shiai Time'),
         ),
-      ),
-    );
+        backgroundColor: AppColors.background,
+        body: HomeScreen(),
+        ),
+      );
   }
 }
